@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Presentations - Vibe Coding</title>
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Internal CSS -->
+  <style>
+    .accordion {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .accordion-item {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .accordion-header {
+      padding: 15px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #f1f1f1;
+      transition: background 0.3s ease;
+    }
+
+    .accordion-header:hover {
+      background-color: #e1e1e1;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      transition: max-height 0.5s ease, padding 0.3s ease;
+      background-color: #fafafa;
+    }
+
+    .accordion-content p {
+      padding: 10px 0;
+    }
+
+    /* Increase max-height & add padding when active to show animation */
+    .accordion-item.active .accordion-content {
+      max-height: 700px; /* enough height for animation */
+      padding: 20px;
+    }
+
+    /* Animation Concept One */
+    .concept-one {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      padding: 8em;
+      background: url("https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/desert.jpg") no-repeat center center / cover;
+      position: relative;
+      height: 400px;
+      margin: 40px auto;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      color: white;
+      overflow: hidden;
+    }
+
+    .concept-one h1 {
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 50%;
+      margin-top: -40px;
+      transition: 0.5s ease;
+      z-index: 0;
+      letter-spacing: 15px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 50px;
+      text-align: center;
+      text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      line-height: 1.2;
+    }
+
+    .hover {
+      cursor: pointer;
+      z-index: 1;
+      background: rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      border-radius: 8px;
+      color: #fff;
+      user-select: none;
+    }
+
+    .hover:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Hover effects to shift h1 */
+    .hover-1:hover ~ h1 {
+      left: 30px;
+      margin-top: -20px;
+    }
+    .hover-2:hover ~ h1 {
+      margin-top: -20px;
+    }
+    .hover-3:hover ~ h1 {
+      right: 30px;
+      margin-top: -20px;
+    }
+    .hover-4:hover ~ h1 {
+      left: 30px;
+      margin-top: 0;
+    }
+    .hover-6:hover ~ h1 {
+      right: 30px;
+      margin-top: 0;
+    }
+    .hover-7:hover ~ h1 {
+      left: 30px;
+      margin-top: -50px;
+    }
+    .hover-8:hover ~ h1 {
+      margin-top: -50px;
+    }
+    .hover-9:hover ~ h1 {
+      right: 30px;
+      margin-top: -50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vibe Coding</h1>
+    <p>The Personal Blog of Cristian</p>
+  </header>
+
+  <nav>
+    <a href="index.html">About</a>
+    <a href="infographics.html">Infographics</a>
+    <a href="presentations.html">Presentations</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <h2 style="text-align:center; margin-top: 20px;">Interactive Presentations</h2>
+    <div class="accordion">
+
+      <!-- Accordion Item 1 -->
+      <div class="accordion-item">
+        <div class="accordion-header">🎧 Coding with Rhythm</div>
+        <div class="accordion-content">
+          <p>Explore how music and focus can boost your productivity as a developer. Learn about coding flow, playlists, and session planning.</p>
+          <section class="concept-one" aria-label="Interactive Animated Concept">
+            <div class="hover hover-1">C</div>
+            <div class="hover hover-2">O</div>
+            <div class="hover hover-3">D</div>
+            <div class="hover hover-4">E</div>
+            <div class="hover"></div>
+            <div class="hover hover-6">R</div>
+            <div class="hover hover-7">H</div>
+            <div class="hover hover-8">Y</div>
+            <div class="hover hover-9">T</div>
+            <h1>Coding<br>Rhythm</h1>
+          </section>
+        </div>
+      </div>
+
+      <!-- Accordion Item 2 -->
+      <div class="accordion-item">
+        <div class="accordion-header">🎨 Code is Creative</div>
+        <div class="accordion-content">
+          <p>This presentation shows how developers can use design thinking to build expressive, visually appealing apps and websites.</p>
+          <section class="concept-one" aria-label="Interactive Animated Concept">
+            <div class="hover hover-1">C</div>
+            <div class="hover hover-2">R</div>
+            <div class="hover hover-3">E</div>
+            <div class="hover hover-4">A</div>
+            <div class="hover"></div>
+            <div class="hover hover-6">T</div>
+            <div class="hover hover-7">I</div>
+            <div class="hover hover-8">V</div>
+            <div class="hover hover-9">E</div>
+            <h1>Code is<br>Creative</h1>
+          </section>
+        </div>
+      </div>
+
+      <!-- Accordion Item 3 -->
+      <div class="accordion-item">
+        <div class="accordion-header">🚀 Launch It Live</div>
+        <div class="accordion-content">
+          <p>Learn how to host your static websites easily using GitHub Pages and Netlify—great for portfolios, blogs, and demos.</p>
+          <section class="concept-one" aria-label="Interactive Animated Concept">
+            <div class="hover hover-1">L</div>
+            <div class="hover hover-2">A</div>
+            <div class="hover hover-3">U</div>
+            <div class="hover hover-4">N</div>
+            <div class="hover"></div>
+            <div class="hover hover-6">C</div>
+            <div class="hover hover-7">H</div>
+            <div class="hover hover-8">I</div>
+            <div class="hover hover-9">T</div>
+            <h1>Launch<br>Live</h1>
+          </section>
+        </div>
+      </div>
+
+      <!-- Accordion Item 4 -->
+      <div class="accordion-item">
+        <div class="accordion-header">🧠 Learn in Layers</div>
+        <div class="accordion-content">
+          <p>Discover how to use infographics and visual notes to break down complex topics like HTML, CSS, and JavaScript.</p>
+          <section class="concept-one" aria-label="Interactive Animated Concept">
+            <div class="hover hover-1">L</div>
+            <div class="hover hover-2">E</div>
+            <div class="hover hover-3">A</div>
+            <div class="hover hover-4">R</div>
+            <div class="hover"></div>
+            <div class="hover hover-6">N</div>
+            <div class="hover hover-7">L</div>
+            <div class="hover hover-8">A</div>
+            <div class="hover hover-9">Y</div>
+            <h1>Learn<br>Layers</h1>
+          </section>
+        </div>
+      </div>
+
+      <!-- Accordion Item 5 -->
+      <div class="accordion-item">
+        <div class="accordion-header">🔥 Frontend Energy</div>
+        <div class="accordion-content">
+          <p>Tips and tricks for building dynamic, responsive, and visually rich user interfaces that feel alive and intuitive.</p>
+          <section class="concept-one" aria-label="Interactive Animated Concept">
+            <div class="hover hover-1">F</div>
+            <div class="hover hover-2">R</div>
+            <div class="hover hover-3">O</div>
+            <div class="hover hover-4">N</div>
+            <div class="hover"></div>
+            <div class="hover hover-6">T</div>
+            <div class="hover hover-7">E</div>
+            <div class="hover hover-8">N</div>
+            <div class="hover hover-9">D</div>
+            <h1>Frontend<br>Energy</h1>
+          </section>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cristian | Vibe Coding</p>
+  </footer>
+
+  <script>
+    // Accordion functionality
+    const headers = document.querySelectorAll('.accordion-header');
+
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+
+        // Close other open items
+        document.querySelectorAll('.accordion-item.active').forEach(activeItem => {
+          if(activeItem !== item) activeItem.classList.remove('active');
+        });
+
+        // Toggle this one
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
